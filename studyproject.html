@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="studyprojectstyle.css">
+    <script src="https://kit.fontawesome.com/fbc2af43bd.js" crossorigin="anonymous"></script>
+    <script src="scroll-animations.js"></script>
+</head>
+
+<div id="header">
+    <div class="container">
+        <div class = "social-icons">
+        <a href="mailto:aidenjk2003@gmail.com"><i class="fa-solid fa-paper-plane"></i></a>
+        <a href="tel:+7035418879"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://github.com/aidenjk2003"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/aiden-kim-55916814b/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <nav>
+            <ul id = "sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            
+        </nav>
+        <video controls width="640" height="360" poster="thumbnail.jpg">
+            <source src="images/studyproject.mp4" type="video/mp4">
+          </video>
+    </div>
+</div>  
+</div>    
+    <div id="services" class="scroll-transition">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p></p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p></p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+
+
+</body>
+</html>
